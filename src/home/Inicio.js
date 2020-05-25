@@ -1,16 +1,16 @@
 import React from 'react'
-import { Container, Header, Segment, Card, Button } from 'semantic-ui-react'
+import { Container, Segment, Card, Button } from 'semantic-ui-react'
+
+import Navegacao from './Navegacao'
 
 const Inicio = props => {
     return (
         <div>
+            <Navegacao />
             <Container>
                 <Segment pilled>
                     Quiz React
                 </Segment>
-                <Header as='h2'>
-                    Jogo de Perguntas e Respostas
-                </Header>
                 <p>
                     Desafie os seus amigos neste incrível jogo de perguntas e respostas
                 </p>
@@ -19,11 +19,14 @@ const Inicio = props => {
                         Acesse agora mesmo!
                     </Card.Content>
                     <Card.Content>
-                        <Button basic color='blue'>
+                        <Button color='facebook'>
                             Login com Facebook
                         </Button>
-                        <Button basic color='green'>
-                            Usuário Administrativo
+                        <Button color='twitter'>
+                            Login com Twitter
+                        </Button>
+                        <Button basic color='blue'>
+                            Login como Administrador
                         </Button>
                     </Card.Content>
                 </Card>
