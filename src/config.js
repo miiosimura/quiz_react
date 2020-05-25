@@ -12,7 +12,12 @@ var firebaseConfig = {
   measurementId: "G-91B92JDKX2"
 };
 // Initialize Firebase
-const db = firebase.database(firebaseConfig)
+const db = Firebase.database(firebaseConfig)
 const config = Rebase.createClass(db)
 
+export const providers = {
+  'facebook': new Firebase.auth.FacebookAuthProvider()
+}
+
+export const auth = firebaseConfig.auth()
 export default config
