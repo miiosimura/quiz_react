@@ -1,7 +1,7 @@
-import Firebase from 'firebase'
+import firebase from 'firebase'
 import Rebase from 're-base'
 
-const firebaseConfig = Firebase.initializeApp({
+const firebaseConfig = firebase.initializeApp({
   apiKey: "AIzaSyC9NcbZcCkJ8SXbK4Oni07lB5anQUBnot8",
   authDomain: "miiosimura-projeto-quiz-react.firebaseapp.com",
   databaseURL: "https://miiosimura-projeto-quiz-react.firebaseio.com",
@@ -12,11 +12,11 @@ const firebaseConfig = Firebase.initializeApp({
   measurementId: "G-91B92JDKX2"
 });
 // Initialize Firebase
-const db = Firebase.database(firebaseConfig)
+const db = firebase.database(firebaseConfig)
 const config = Rebase.createClass(db)
 
 export const providers = {
-  'facebook': new Firebase.auth.FacebookAuthProvider()
+  'facebook': new firebase.auth.FacebookAuthProvider(),
 }
 
 export const auth = firebaseConfig.auth()
